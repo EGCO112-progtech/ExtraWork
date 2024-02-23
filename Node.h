@@ -7,36 +7,20 @@
 #ifndef Node_h
 #define Node_h
 
-struct node
-{
-    int data;
-    struct node *nextPtr;
+struct order{
+   struct order* nextPtr;
+   int order_number;
+   int quantity;
 };
 
-typedef struct node Node;
-typedef struct node* NodePtr;
+typedef struct order Node;
+typedef struct order* NodePtr;
 
+typedef struct Queue{
+   NodePtr headPtr,tailPtr;
+    int size;
+}Que;
 
-void enqueue(NodePtr * head, NodePtr* tail, int x){
-  Node* new_node=(NodePtr) malloc(sizeof(Node));
-if(new_node){ 
-    /* Finish queue*/
- }
-}
-
-
-int dequeue(NodePtr* head, NodePtr* tail){
-  NodePtr t=*head;
-   if(t){
-   int value= t->data;
-   /* Finish dequeue*/
-       
-       
-   return value;
-   }
-   printf("Empty queue");
-   return 0;
-}
 
 
 
